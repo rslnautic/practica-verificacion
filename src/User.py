@@ -1,15 +1,13 @@
+import oauth
 import tweepy
 
-consumer_key = '40GvlhlFPNbVGkZnPncPH8DgB'
-consumer_secret = 'G595ceskX8iVH34rsuLSqpFROL0brp8ezzZR2dGvTKvcpPsKPw'
-access_token = '397905190-LXMFC0clhtDxx5cITBWVFqVUKNQBKuqM06Ls4k5n'
-access_token_secret = 'nPzoHy5UwzOPUZVZO3JhBFRL3WgdM0jJKignxIzQ6nAS1'
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+class User:
+    def __init__(self, name):
+        self.user = oauth.api.get_user(name)
 
-api = tweepy.API(auth)
+    def print_friends_tweets(self):
+        new_tweets = oauth.api.user_timeline(screen_name = "sergiorosello", count=200)
+        for tweet in new_tweets:
+            print "-> "+tweet.text
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
-    print tweet.text
