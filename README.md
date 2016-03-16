@@ -14,13 +14,13 @@ Intstall `tweepy`
 ```
 pip install tweepy
 ```
-or install all pip depencies with this command
+or install all pip dependencies with this command
 ```
 pip install -r requirements.txt
 ```
 ## Run
 
-Run program with command after install all pip depencies `python tweet_scraper.py` inside `src` folder
+Run program with command after install all pip dependencies `python tweet_scraper.py` inside `src` folder
 
 ## Tests
 
