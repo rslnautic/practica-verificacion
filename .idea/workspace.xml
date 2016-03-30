@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ef5c4cf-0e84-4670-875c-af825ab6b9d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test_twitter_unittest.py" afterPath="$PROJECT_DIR$/src/test_twitter_unittest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tweet_scraper.py" afterPath="$PROJECT_DIR$/src/tweet_scraper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/virtual_env/pip-selfcheck.json" afterPath="$PROJECT_DIR$/virtual_env/pip-selfcheck.json" />
     </list>
     <ignored path="PracticaVerificacion.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +19,7 @@
     <SUITE FILE_PATH="coverage/PracticaVerificacion$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1459371518454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/PracticaVerificacion$User.coverage" NAME="User Coverage Results" MODIFIED="1458128303813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/PracticaVerificacion$test_twitter_unittest.coverage" NAME="test_twitter_unittest Coverage Results" MODIFIED="1459371503477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/PracticaVerificacion$tweet_scraper.coverage" NAME="tweet_scraper Coverage Results" MODIFIED="1459371548557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PracticaVerificacion$tweet_scraper.coverage" NAME="tweet_scraper Coverage Results" MODIFIED="1459372315987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="tweet_scraper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tweet_scraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6360424">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.68904597">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -605,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tweet_scraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6360424">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.68904597">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

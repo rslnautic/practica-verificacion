@@ -19,10 +19,13 @@ def print_friends_tweets(name, n):
     new_tweets = api.user_timeline(screen_name=name, count=n)
     db = MongoDB("verificacion")
     coll = db.collection(name)
+
     # print all tweets of screen_name account
     for tweet in new_tweets:
         print "-> " + tweet.text
-        coll.save({"name": name, "tweet": tweet.txt})
+        dict = {'tweet': tweet.text}
+        coll.save(dict)
+
 
 
 if '__main__' == __name__:
