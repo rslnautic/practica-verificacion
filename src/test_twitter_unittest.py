@@ -1,7 +1,6 @@
 import unittest
 import tweet_scraper
 
-
 class test_twitter_unittest(unittest.TestCase):
     def setUp(self):
         pass

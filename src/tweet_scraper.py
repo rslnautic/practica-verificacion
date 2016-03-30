@@ -1,4 +1,6 @@
 import tweepy
+from MongoDB import MongoDB
+
 
 # Twitter API credentials
 consumer_key = "40GvlhlFPNbVGkZnPncPH8DgB"
@@ -15,10 +17,12 @@ def print_friends_tweets(name, n):
 
     # make initial request for most recent tweets (200 is the maximum allowed count)
     new_tweets = api.user_timeline(screen_name=name, count=n)
-
+    db = MongoDB("verificacion")
+    coll = db.collection(name)
     # print all tweets of screen_name account
     for tweet in new_tweets:
         print "-> " + tweet.text
+        coll.save({"name": name, "tweet": tweet.txt})
 
 
 if '__main__' == __name__:
