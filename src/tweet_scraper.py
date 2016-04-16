@@ -1,36 +1,34 @@
 import tweepy
-from MongoDB import MongoDB
+from mongo_db import MongoDB
 
 
-# Twitter API credentials
-consumer_key = "40GvlhlFPNbVGkZnPncPH8DgB"
-consumer_secret = "G595ceskX8iVH34rsuLSqpFROL0brp8ezzZR2dGvTKvcpPsKPw"
-access_token = "397905190-LXMFC0clhtDxx5cITBWVFqVUKNQBKuqM06Ls4k5n"
-access_token_secret = "nPzoHy5UwzOPUZVZO3JhBFRL3WgdM0jJKignxIzQ6nAS1"
+class Twitter:
+    CONSUMER_KEY = "40GvlhlFPNbVGkZnPncPH8DgB"
+    CONSUMER_SECRET = "G595ceskX8iVH34rsuLSqpFROL0brp8ezzZR2dGvTKvcpPsKPw"
+    ACCESS_TOKEN = "397905190-LXMFC0clhtDxx5cITBWVFqVUKNQBKuqM06Ls4k5n"
+    ACCESS_TOKEN_SECRET = "nPzoHy5UwzOPUZVZO3JhBFRL3WgdM0jJKignxIzQ6nAS1"
 
+    def __init__(self):
+        auth = tweepy.OAuthHandler(self.CONSUMER_KEY, self.CONSUMER_SECRET)
+        auth.set_access_token(self.ACCESS_TOKEN, self.ACCESS_TOKEN_SECRET)
+        self.twitter_api = tweepy.API(auth)
 
-def print_friends_tweets(name, n):
-    # authorize twitter, initialize tweepy
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    api = tweepy.API(auth)
+    def print_tweets(self,count=1):
+        tweets = self._timeline(count)
+        for tweet in tweets:
+            print tweet
 
-    # make initial request for most recent tweets (200 is the maximum allowed count)
-    new_tweets = api.user_timeline(screen_name=name, count=n)
-    db = MongoDB("verificacion")
-    coll = db.collection(name)
+    def save_tweets(self,count=1):
+        db = MongoDB("verificacion")
+        coll = db.collection("twitter_friends")
+        tweets = self._timeline(count)
+        for tweet in tweets:
+            coll.insert(tweet)
 
-    # print all tweets of screen_name account
-    for tweet in new_tweets:
-        print "-> " + tweet.text
-        dict = {'tweet': tweet.text}
-        coll.save(dict)
-
-
-
-if '__main__' == __name__:
-    print 'Introduce el nombre del usuario para ver sus tweets'
-    name = raw_input()
-    print 'Introduce la cantidad de tweets que quieres mostrar maximo 200 por cuenta'
-    n = raw_input()
-    print_friends_tweets(name, n)
+    # Returns the *count* numbers of tweets of your timeline and save it into a database
+    def _timeline(self,count=200):
+        tweets = []
+        for tweet in tweepy.Cursor(self.twitter_api.user_timeline, count=count):
+            text = tweet.text
+            tweets.append(text)
+        return tweets
