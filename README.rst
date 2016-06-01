@@ -35,9 +35,13 @@ Run the tests means: lint the code using PEP8 and pass all the tests
     venv/bin/pylint src
 
 
-If you want to know the coverage you can use paver too::
+If you want to know the coverage use::
 
     venv/bin/nosetests --with-coverage
+
+BDD/Funcional Test::
+
+    lettuce tests
 
 Contributors
 ============
