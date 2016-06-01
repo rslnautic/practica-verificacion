@@ -2,21 +2,20 @@
  Practica verificación
 =========================
 
-.. image:: https://github.com/rslnautic/practica-verificacion.svg?branch=master
-    :target: https://github.com/rslnautic/practica-verificacion
-
 Synopsis
 ========
 
-Read words from a font and show it.
+Print and save in Database * Ramón Serrano López (`@ramonsl93`_) n tweets
 
 
 Installation
 ============
 
-#. Clone the repo and install and create a new environmet using virtualenv_::
+#. Clone the repo and install and create a new environmet using `virtualenv`_ ::
 
-    source venv/bin/activate
+    1 - pip install virtualenv
+    2 - virtualenv venv
+    3 - source venv/bin/activate
 
 #. Once you have created and activated the environment you have to install the dependencies::
 
@@ -29,20 +28,23 @@ Tests
 
 All the tests are into ``tests`` directory. You can run them using::
 
-    venv/bin/nosetest
+    venv/bin/nosetests 
 
 Run the tests means: lint the code using PEP8 and pass all the tests
 
+    venv/bin/pylint src
+
+
 If you want to know the coverage you can use paver too::
 
-    venv/bin/coverage
+    venv/bin/nosetests --with-coverage
 
 Contributors
 ============
 
-* Ramón Serrano López (`@rslnautic`_)
+* Ramón Serrano López (`@ramonsl93`_)
 
-.. _@rslnautic: http://twitter.com/ramonsl93
+.. _@ramonsl93: http://twitter.com/ramonsl93
 
 License
 =======
