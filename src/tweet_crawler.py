@@ -20,7 +20,7 @@ class Twitter(object):  # pylint: disable=too-few-public-methods
     def print_tweets(self, count=1):
         tweets = self._user_timeline(count)
         for tweet in tweets:
-            print tweet
+            print tweet.encode('utf-8')
 
     # Method to save our tweets
     def save_tweets(self, count=1):
