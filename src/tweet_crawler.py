@@ -1,7 +1,7 @@
 """Twitter crawler script"""
 
 import tweepy
-from src.database import MongoDB
+from database import MongoDB
 
 
 class Twitter(object):  # pylint: disable=too-few-public-methods
