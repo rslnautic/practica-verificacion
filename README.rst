@@ -30,7 +30,7 @@ All the tests are into ``tests`` directory. You can run them using::
 
     venv/bin/nosetests 
 
-Run the tests means: lint the code using PEP8 and pass all the tests
+Run the tests means: lint the code using PEP8 and pass all the tests::
 
     venv/bin/pylint src
 
