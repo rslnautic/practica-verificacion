@@ -25,6 +25,7 @@ class TestTwitter(unittest.TestCase):
 
         twitter = Twitter()
         twitter._user_timeline = mock.MagicMock(return_value=["hola"])
+        self.fail();
         try:
             twitter.save_tweets(1)
         except Exception as e:
