@@ -4,8 +4,8 @@
 
 Synopsis
 ========
-
-Print and save in Database * Ramón Serrano López (`@ramonsl93`_) n tweets
+* Ramón Serrano López (`@ramonsl93`_)
+Print and save in Database N number of tweets
 
 
 Installation
